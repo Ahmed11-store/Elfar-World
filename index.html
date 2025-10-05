@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elfar World - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- زر تسجيل/دخول الحساب أعلى يسار -->
+<button id="topLoginBtn">Login / Register</button>
+
+<!-- زر الترجمة أعلى يمين -->
+<select id="langSelect">
+  <option value="en">EN</option>
+  <option value="ar">AR</option>
+</select>
+
+<!-- اسم الموقع -->
+<h1 class="site-title">Elfar World</h1>
+
+<!-- شريط الخيارات الزجاجي -->
+<nav class="glass-nav">
+  <a href="index.html" id="homeLink">Home</a>
+  <a href="shop.html" id="shopLink">Shop</a>
+  <a href="contact.html" id="contactLink">Contact</a>
+</nav>
+
+<!-- تعريف المالك -->
+<section class="owner-section">
+  <h2>Engineer Ahmed Hussein Elfar</h2>
+  <p>Specialist in Software Engineering</p>
+</section>
+
+<!-- وصف موجز الموقع -->
+<section class="summary-section">
+  <p>Elfar World is your one-stop online marketplace offering a wide range of products with high-quality service and fast delivery.</p>
+</section>
+
+<!-- زر تقييم الموقع -->
+<section id="ratingSection">
+  <h3>Rate Our Site</h3>
+  <div id="stars">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+  </div>
+  <p id="ratingResult">Your rating: 0</p>
+</section>
+
+<!-- Modal تسجيل/دخول الحساب -->
+<div id="topLoginModal" class="modal">
+  <div class="modal-content">
+    <h2 id="modalTitleTop">Register</h2>
+    <input type="text" id="nameInputTop" placeholder="Full Name">
+    <input type="email" id="emailInputTop" placeholder="Email">
+    <input type="password" id="passwordInputTop" placeholder="Password">
+    <button id="submitLoginTop">Submit</button>
+    <p id="switchModeTop">Already have an account? <span id="toggleLoginTop">Login</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

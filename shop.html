@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elfar World - Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- زر تسجيل/دخول الحساب أعلى يسار -->
+<button id="topLoginBtn">Login / Register</button>
+
+<!-- زر الترجمة أعلى يمين -->
+<select id="langSelect">
+  <option value="en">EN</option>
+  <option value="ar">AR</option>
+</select>
+
+<!-- اسم الموقع -->
+<h1 class="site-title">Elfar World</h1>
+
+<!-- شريط الخيارات الزجاجي -->
+<nav class="glass-nav">
+  <a href="index.html" id="homeLink">Home</a>
+  <a href="shop.html" id="shopLink">Shop</a>
+  <a href="contact.html" id="contactLink">Contact</a>
+</nav>
+
+<!-- شريط الميزانية -->
+<div id="budgetContainer">
+  <label for="budget">Set your budget: $<span id="budgetValue">200</span></label>
+  <input type="range" id="budget" min="0" max="200" step="5" value="200">
+</div>
+
+<!-- السلة -->
+<div id="cart">Cart: <span id="cartCount">0</span> items</div>
+
+<!-- المنتجات -->
+<div class="shop-container">
+  <div class="product" data-price="50">
+    <img src="https://via.placeholder.com/250x150.png?text=Product+1" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>High-quality product with fast delivery.</p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="product" data-price="75">
+    <img src="https://via.placeholder.com/250x150.png?text=Product+2" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>High-quality product with fast delivery.</p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="product" data-price="100">
+    <img src="https://via.placeholder.com/250x150.png?text=Product+3" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>High-quality product with fast delivery.</p>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+</div>
+
+<!-- أزرار الدفع -->
+<section id="payment">
+  <h3>Choose Payment Method</h3>
+  <button class="payment-btn">PayPal</button>
+  <button class="payment-btn">Apple Pay</button>
+  <button class="payment-btn">Google Pay</button>
+</section>
+
+<!-- Modal تسجيل/دخول الحساب -->
+<div id="topLoginModal" class="modal">
+  <div class="modal-content">
+    <h2 id="modalTitleTop">Register</h2>
+    <input type="text" id="nameInputTop" placeholder="Full Name">
+    <input type="email" id="emailInputTop" placeholder="Email">
+    <input type="password" id="passwordInputTop" placeholder="Password">
+    <button id="submitLoginTop">Submit</button>
+    <p id="switchModeTop">Already have an account? <span id="toggleLoginTop">Login</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
