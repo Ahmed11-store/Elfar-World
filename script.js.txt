@@ -1,0 +1,43 @@
+// ترجمة الصفحة
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', () => {
+  const lang = langSelect.value;
+  if (lang === 'ar') {
+    document.body.dir = 'rtl';
+    document.body.lang = 'ar';
+  } else {
+    document.body.dir = 'ltr';
+    document.body.lang = 'en';
+  }
+});
+
+// Modal تسجيل/دخول الحساب
+const topLoginBtn = document.getElementById('topLoginBtn');
+const topLoginModal = document.getElementById('topLoginModal');
+const toggleLoginTop = document.getElementById('toggleLoginTop');
+const modalTitleTop = document.getElementById('modalTitleTop');
+
+topLoginBtn.addEventListener('click', () => topLoginModal.style.display = 'block');
+window.addEventListener('click', (e) => { if (e.target == topLoginModal) topLoginModal.style.display = 'none'; });
+
+toggleLoginTop.addEventListener('click', () => {
+  if (modalTitleTop.textContent === 'Register') {
+    modalTitleTop.textContent = 'Login';
+    toggleLoginTop.textContent = 'Register';
+  } else {
+    modalTitleTop.textContent = 'Register';
+    toggleLoginTop.textContent = 'Login';
+  }
+});
+
+// تقييم الموقع
+let rating = 0;
+const stars = document.querySelectorAll('.star');
+const ratingResult = document.getElementById('ratingResult');
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    rating = star.getAttribute('data-value');
+    ratingResult.textContent = Your rating: ${rating};
+    stars.forEach(s => s.style.color = s.getAttribute('data-value') <= rating ? 'gold' : 'gray');
+  });
+});

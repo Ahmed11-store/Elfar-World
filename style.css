@@ -46,6 +46,28 @@ body {
   color: #ffcc00;
 }
 
+/* شريط زجاجي للتعريف بالموقع والموجز */
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.glass-box h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.glass-box p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
 /* ====== زر الترجمة وزر تسجيل ====== */
 #topLoginBtn, #langSelect {
   position: fixed;
